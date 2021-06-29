@@ -1,0 +1,57 @@
+/* ============ FONTS ============ */
+@font-face {
+    font-family: 'Calibre';
+    src: local('Calibre Regular'), local('Calibre-Regular'),
+        url('Calibre-Regular.woff2') format('woff2'),
+        url('Calibre-Regular.woff') format('woff'),
+        url('Calibre-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+
+/* ============ CSS VARIABLES ============ */
+:root {
+
+}
+
+/* ============ RESET CSS ============ */
+
+
+/* ============ REUSABLE CSS CLASSES ============ */
+.container{
+    max-width: 968px;
+    margin-left: ;
+    margin-right: ;
+}
+
+
+/* For project container */
+
+
+
+/* Buttons */
+
+
+/* ============ HEADER ============ */
+h1 {
+    font-family: 'Calibre-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ============ NAV ============ */
+
+
+/* ============ NOME ============ */
+
+
+/* ============ ABOUT ============ */
+
+
+/* ============ PROJECTS ============ */
+
+
+/* ============ CONTACT ============ */
+
+
+/* =========== FOOTER ===========*/
