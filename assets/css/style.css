@@ -193,8 +193,9 @@ header {
     padding-left: 10px;
     position: relative;
     animation: linear infinite alternate;
-    animation-name: translateArrow;
-    animation-duration: 1.5s;
+    -webkit-animation: linear infinite alternate;
+    -webkit-animation-name: translateArrow;
+    -webkit-animation-duration: 1.5s;
     transition: all 0.3s ease-in-out;
 }
 
