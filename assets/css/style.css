@@ -8,9 +8,11 @@
 
 /* Margins */
 --m-1: 1rem;
---m-1-25: 1.25rem;∂
+--m-1-25: 1.25rem;
 --m-1-5: 1.5rem;
 
+/* Hover overlay */
+--btn-transition: 0.5s;
 
 }
 
@@ -129,20 +131,104 @@ header {
     background-color: black;
 }
 
+/* New logo on scroll */
+.new__logo{
+    color: white;
+    background: black;
+}
+
 /* ============ HOME ============ */
 
 .home{
-    height: 100vh;
-
+    height: 1000px;
 }
-
 .home__container{
-    width: 900px;
+    width: 960px;
     display: flex;
+    padding-top: 6rem;
+
 }
+
+.home__info{
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    
+    padding-top: 3rem;
+    row-gap: .3rem;
+}
+
+.home__info-intro{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.home__info-name{
+    font-size: 1.8rem;
+}
+
+.home__info-desc1{
+    font-size: 1.3rem;
+}
+
+.home__info-desc2{
+    font-weight: 500;
+}
+
+.home__info-btn{
+    position: relative;
+    display:flex;
+    align-items: center;
+    background-color: rgb(53, 185, 237);
+    width: fit-content;
+    padding: 1rem 2.2rem;
+    color: white;
+    margin-top: 3rem;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.home__info-arrow{
+    font-size: 1.25rem;
+    padding-left: 10px;
+    position: relative;
+    animation: linear infinite alternate;
+    animation-name: translateArrow;
+    animation-duration: 1.5s;
+    transition: all 0.3s ease-in-out;
+}
+
+.home__info-btn::before{
+    content: "";
+    position: absolute;
+    border: 1px solid rgb(53, 185, 237);
+    border-radius: 10px;
+    width: calc(100%);
+    height: calc(100%);
+    top: 5px;
+    left: 7px;
+    z-index: -1;
+}
+
+.home__info-btn:hover{
+    background-color: rgb(27, 78, 81);
+    transition: var(--btn-transition);
+    z-index: 100;
+}
+
+/* Change the ::before properties when hovering the parent */
+.home__info-btn:hover::before{
+    border: 1px solid rgb(27, 78, 81);
+    transition: var(--btn-transition);
+    width: calc(90%);
+    height: calc(90%);
+    top: 0;
+    left: 0;
+}
+
 
 .home__img{
-    background-image: local('../gif.gif');
+    
 }
 
 /* ============ ABOUT ============ */
@@ -155,3 +241,16 @@ header {
 
 
 /* =========== FOOTER ===========*/
+
+/* ========== KEYFRAMES ==========*/
+@keyframes translateArrow {
+    0% {
+        left: -3%;
+    }
+    50% {
+        left: 0%;
+    }
+    100% {
+        left: 3%;
+    }
+}

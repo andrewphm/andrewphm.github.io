@@ -21,7 +21,7 @@
 
         <a href="#" class="header__logo">
             <div class="triple-border">
-                <div class="triple-border__container">
+                <div class="triple-border__container" id="logo">
                     {() => ap}
                 </div>
             </div>
@@ -49,24 +49,31 @@
         <div class="home">
             <div class="home__container container section">
                 <div class="home__info">
-                    <div class="home__intro">
+                    <div class="home__info-intro">
                         <p>Hi, my name is</p>
                     </div>
     
-                    <div class="home__name">
+                    <div class="home__info-name">
                         <h1>Andrew Pham.</h1>
                     </div>
                     
-                    <div class="home__description-one">
+                    <div class="home__info-desc1">
                         <h2>I am a Software Developer</h2>
                     </div>
     
-                    <div class="home__description-two">
-                        <p>I am a Toronto-based software developer who is passionate about engineering creative digital experience.</p>
+                    <div class="home__info-desc2">
+                        <p>I am a Toronto-based creative who is passionate about engineering innovative digital experiences.</p>
                     </div>
+
+                    <a href="#case-studies" class="home__info-btn">
+                        <span>View my projects</span> <i class="ri-arrow-right-s-line home__info-arrow"></i>
+
+                    </a>
                 </div>
+
+
                 <div class="home__img">
-                    <img src="gif.gif" alt="">
+                    <img src="gif.gif" draggable="false" alt="">
                 </div>
             </div>
         </div>
@@ -84,5 +91,6 @@
 
 
     </div>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
