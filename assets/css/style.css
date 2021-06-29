@@ -1,29 +1,56 @@
 /* ============ FONTS ============ */
-@font-face {
-    font-family: 'Calibre';
-    src: local('Calibre Regular'), local('Calibre-Regular'),
-        url('Calibre-Regular.woff2') format('woff2'),
-        url('Calibre-Regular.woff') format('woff'),
-        url('Calibre-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 
 /* ============ CSS VARIABLES ============ */
 :root {
+--header-height: 6rem;
+
+/* Margins */
+--m-1: 1rem;
+--m-1-25: 1.25rem;∂
+--m-1-5: 1.5rem;
+
 
 }
 
 /* ============ RESET CSS ============ */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
 
 /* ============ REUSABLE CSS CLASSES ============ */
 .container{
-    max-width: 968px;
-    margin-left: ;
-    margin-right: ;
+    max-width: 1060px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section{
+    padding: 4.5rem 0 2.5rem;
 }
 
 
@@ -35,15 +62,88 @@
 
 
 /* ============ HEADER ============ */
-h1 {
-    font-family: 'Calibre-Regular', sans-serif;
+header {
+    width: 100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: white;
 }
 
 /* ============ NAV ============ */
+/* Nav Menu */
+.nav{
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.nav__list{
+    display:flex;
+    column-gap: 3rem;
+    padding-right: 3rem;
+}
 
-/* ============ NOME ============ */
+.nav__link{
+    color: black;
+    font-weight: 600;
+}
 
+/* Nav logo */
+.triple-border{
+    display: inline-block;
+    position: relative;
+}
+
+.triple-border:before, .triple-border:after{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: calc(100% + 1px);
+    height: calc(100% + 1px);
+}
+
+.triple-border:before{
+    left: 0;
+    top: 0;
+}
+
+.triple-border:after{
+    right: 0;
+    bottom: 0;
+}
+
+.triple-border__container{
+    color: black;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: .4rem;
+}
+
+.triple-border:hover .triple-border__container{
+    color: white;
+    background-color: black;
+}
+
+/* ============ HOME ============ */
+
+.home{
+    height: 100vh;
+
+}
+
+.home__container{
+    width: 900px;
+    display: flex;
+}
+
+.home__img{
+    background-image: local('../gif.gif');
+}
 
 /* ============ ABOUT ============ */
 
