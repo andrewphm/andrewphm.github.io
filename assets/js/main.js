@@ -1,9 +1,8 @@
-// Header toggle
+ /* ========= HEADER TOGGLE ========== */
 const logo = document.getElementById('logo');
 const header = document.querySelector('header')
 const nav = document.getElementById('nav-menu')
 let scrollHeight = 0;
-
 
 window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
@@ -20,4 +19,17 @@ window.addEventListener('scroll', () => {
         }
         scrollHeight = scrollY;
         console.log(scrollY);
- })
+})
+
+
+ /* ========= SCROLL REVEAL ANIMATION ========== */
+const sr = ScrollReveal({
+    distance: '60px',
+    duration: 2300,
+    reset: true,
+})
+
+sr.reveal(`.home__info, .home__img`, {
+    origin: 'top',
+    interval: 100,
+})

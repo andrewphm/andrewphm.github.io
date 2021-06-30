@@ -193,7 +193,7 @@ header {
 .home__info {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  max-width: 70%;
   padding-top: 3rem;
 }
 
@@ -269,8 +269,8 @@ header {
   left: 0;
 }
 
-.home__img {
-    
+.home__img img {
+    padding-left: 20px;
 }
 
 /* ============ ABOUT ============ */
