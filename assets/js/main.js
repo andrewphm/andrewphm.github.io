@@ -25,7 +25,7 @@ window.addEventListener('scroll', () => {
 const sr = ScrollReveal({
     distance: '70px',
     duration: 2400,
-    reset: true,
+    reset: false,
 })
 
 sr.reveal(`.home__info, .home__img`, {
@@ -44,10 +44,12 @@ sr.reveal(`.about__img`, {
 
 
 /* ========== 3D TILT EFFECT ========= */
-VanillaTilt.init(document.querySelector(".about__img"), {
-    max: 10,
+VanillaTilt.init(document.querySelectorAll(".cs__container"), {
+    max: 5,
     speed: 400,
     glare: true,
-    // "max-glare": 1,
+    "max-glare": .3,
+    reverse: true,
 });
+
 

@@ -52,9 +52,15 @@ img {
 
 /* ============ REUSABLE CSS CLASSES ============ */
 .container{
-  max-width: 960px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.cs__container{
+    width: 80%;
+    height: 375px;
+    margin: 5rem auto 8rem;
 }
 
 .section{
@@ -363,8 +369,8 @@ header {
 }
 
 .about__img-wrapper:hover::before{
-    top:10px;
-    left:10px;
+    top:8px;
+    left:8px;
     transition: .3s;
 }
 
@@ -387,6 +393,36 @@ header {
     position: relative;
     top: -6px;
 }
+
+.project-1{
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(6,88,173,1) 0%, rgba(47,185,213,1) 0%, rgba(0,100,125,1) 100%);
+    border-radius: 5px;
+    position: relative;
+}
+
+.project-1-i-1{
+    height: 325px;
+    width: 190px;
+    position: absolute;
+    bottom: 0px;
+    right: 280px;
+}
+.project-1-i-2{
+    height: 325px;
+    width: 190px;
+    position: absolute;
+    right: 50px;
+    bottom: 0px;
+}
+
+.project-1-i-1:hover,
+.project-1-i-2:hover{
+    transform: scale(1.05);
+    transition: .5s;
+}
+
+
 /* ============ CONTACT ============ */
 
 /* =========== FOOTER ===========*/
