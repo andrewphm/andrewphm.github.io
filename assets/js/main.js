@@ -41,3 +41,13 @@ sr.reveal(`.about__img`, {
     origin: 'right',
     interval: 100, 
 })
+
+
+/* ========== 3D TILT EFFECT ========= */
+VanillaTilt.init(document.querySelector(".about__img"), {
+    max: 10,
+    speed: 400,
+    glare: true,
+    // "max-glare": 1,
+});
+
