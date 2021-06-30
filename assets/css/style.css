@@ -1,257 +1,298 @@
 /* ============ FONTS ============ */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,700&display=swap');
 
 /* ============ CSS VARIABLES ============ */
 :root {
---header-height: 6rem;
+  --header-height: 6rem;
 
-/* Margins */
---m-1: 1rem;
---m-1-25: 1.25rem;
---m-1-5: 1.5rem;
+  /* Margins */
+  --m-1: 1rem;
+  --m-1-25: 1.25rem;
+  --m-1-5: 1.5rem;
 
-/* Hover overlay */
---btn-transition: 0.5s;
-
+  /* Hover overlay */
+  --btn-transition: 0.5s;
 }
 
 /* ============ RESET CSS ============ */
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: var(--header-height) 0 0 0;
-    font-family: 'IBM Plex Mono', monospace;
+  margin: var(--header-height) 0 0 0;
+  font-family: "IBM Plex Mono", monospace;
+  line-height: 1.3;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
-img{
-    width: 100%;
+img {
+  width: 100%;
 }
 
 /* ============ REUSABLE CSS CLASSES ============ */
-.container{
-    max-width: 1060px;
-    margin-left: auto;
-    margin-right: auto;
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.section{
-    padding: 4.5rem 0 2.5rem;
+.section {
+  padding: 4.5rem 0 2.5rem;
 }
-
 
 /* For project container */
 
-
-
 /* Buttons */
-
 
 /* ============ HEADER ============ */
 header {
-    width: 100%;
-    position:fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    background-color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: white;
+  
+}
+/* Hide header on scroll */
+.hide__header{
+    background: transparent;
 }
 
 /* ============ NAV ============ */
 /* Nav Menu */
-.nav{
-    height: var(--header-height);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.nav {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1060px;
 }
 
-.nav__list{
-    display:flex;
-    column-gap: 3rem;
-    padding-right: 3rem;
+.nav__list {
+  display: flex;
+  column-gap: 3rem;
+  padding-right: 3rem;
 }
 
-.nav__link{
-    color: black;
-    font-weight: 600;
+
+.hide__menu {
+    display: none;
+}
+
+.nav__link {
+  color: black;
+  font-weight: 600;
+  padding-bottom: 5px;
+  
+}
+
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: black;
+  height: 3px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
 }
 
 /* Nav logo */
-.triple-border{
-    display: inline-block;
-    position: relative;
+.triple-border {
+  display: inline-block;
+  position: relative;
 }
 
-.triple-border:before, .triple-border:after{
-    content: '';
-    position: absolute;
-    z-index: 2;
-    border: 2px solid black;
-    border-radius: 5px;
-    width: calc(100% + 1px);
-    height: calc(100% + 1px);
+.triple-border:before,
+.triple-border:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: calc(100% + 1px);
+  height: calc(100% + 1px);
 }
 
-.triple-border:before{
-    left: 0;
-    top: 0;
+.triple-border:before {
+  left: 0;
+  top: 0;
 }
 
-.triple-border:after{
-    right: 0;
-    bottom: 0;
+.triple-border:after {
+  right: 0;
+  bottom: 0;
 }
 
-.triple-border__container{
-    color: black;
-    font-weight: 500;
-    font-size: 1.5rem;
-    padding: .4rem;
+.triple-border__container {
+  color: black;
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: 0.4rem;
 }
 
-.triple-border:hover .triple-border__container{
-    color: white;
-    background-color: black;
+.triple-border:hover .triple-border__container {
+  color: white;
+  background-color: black;
 }
 
 /* New logo on scroll */
-.new__logo{
-    color: white;
-    background: black;
+.new__logo {
+  color: white;
+  background: black;
 }
 
 /* ============ HOME ============ */
 
-.home{
-    height: 1000px;
+.home {
+  height: 100vh;
 }
-.home__container{
-    width: 960px;
-    display: flex;
-    padding-top: 6rem;
-
-}
-
-.home__info{
-    display:flex;
-    flex-direction: column;
-    width: 80%;
-    
-    padding-top: 3rem;
-    row-gap: .3rem;
+.home__container {
+  width: 960px;
+  display: flex;
+  padding-top: 6rem;
+  position: relative;
 }
 
-.home__info-intro{
-    font-size: 1.25rem;
-    font-weight: 500;
+.home__info {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-top: 3rem;
 }
 
-.home__info-name{
-    font-size: 1.8rem;
+.home__info-intro {
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
-.home__info-desc1{
-    font-size: 1.3rem;
+.home__info-name {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-.home__info-desc2{
-    font-weight: 500;
+.home__info-desc1 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 
-.home__info-btn{
-    position: relative;
-    display:flex;
-    align-items: center;
-    background-color: rgb(53, 185, 237);
-    width: fit-content;
-    padding: 1rem 2.2rem;
-    color: white;
-    margin-top: 3rem;
-    border-radius: 10px;
-    z-index: 10;
+.home__info-desc2 {
+  font-weight: 500;
+  padding-bottom: 1rem;
 }
 
-.home__info-arrow{
-    font-size: 1.25rem;
-    padding-left: 10px;
-    position: relative;
-    animation: linear infinite alternate;
-    -webkit-animation: linear infinite alternate;
-    -webkit-animation-name: translateArrow;
-    -webkit-animation-duration: 1.5s;
-    transition: all 0.3s ease-in-out;
+.home__info-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgb(53, 185, 237);
+  width: fit-content;
+  padding: 1rem 2.2rem;
+  color: white;
+  margin-top: 3rem;
+  border-radius: 10px;
+  z-index: 10;
 }
 
-.home__info-btn::before{
-    content: "";
-    position: absolute;
-    border: 1px solid rgb(53, 185, 237);
-    border-radius: 10px;
-    width: calc(100%);
-    height: calc(100%);
-    top: 5px;
-    left: 7px;
-    z-index: -1;
+.home__info-arrow {
+  font-size: 1.25rem;
+  padding-left: 10px;
+  position: relative;
+  animation: linear infinite alternate;
+  -webkit-animation: linear infinite alternate;
+  -webkit-animation-name: translateArrow;
+  -webkit-animation-duration: 1.5s;
+  transition: all 0.3s ease-in-out;
 }
 
-.home__info-btn:hover{
-    background-color: rgb(27, 78, 81);
-    transition: var(--btn-transition);
-    z-index: 100;
+.home__info-btn::before {
+  content: "";
+  position: absolute;
+  border: 1px solid rgb(53, 185, 237);
+  border-radius: 10px;
+  width: calc(100%);
+  height: calc(100%);
+  top: 5px;
+  left: 5px;
+  z-index: -1;
+}
+
+.home__info-btn:hover {
+  background-color: rgb(27, 78, 81);
+  transition: var(--btn-transition);
+  z-index: 100;
 }
 
 /* Change the ::before properties when hovering the parent */
-.home__info-btn:hover::before{
-    border: 1px solid rgb(27, 78, 81);
-    transition: var(--btn-transition);
-    width: calc(90%);
-    height: calc(90%);
-    top: 0;
-    left: 0;
+.home__info-btn:hover::before {
+  border: 1px solid rgb(27, 78, 81);
+  transition: var(--btn-transition);
+  width: calc(90%);
+  height: calc(90%);
+  top: 0;
+  left: 0;
 }
 
-
-.home__img{
+.home__img {
     
 }
 
 /* ============ ABOUT ============ */
-
+.about__container{
+    height: 1000px;
+}
 
 /* ============ PROJECTS ============ */
 
-
 /* ============ CONTACT ============ */
-
 
 /* =========== FOOTER ===========*/
 
 /* ========== KEYFRAMES ==========*/
 @keyframes translateArrow {
-    0% {
-        left: -3%;
-    }
-    50% {
-        left: 0%;
-    }
-    100% {
-        left: 3%;
-    }
+  0% {
+    left: -3%;
+  }
+  50% {
+    left: 0%;
+  }
+  100% {
+    left: 3%;
+  }
 }
