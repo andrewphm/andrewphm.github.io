@@ -18,18 +18,26 @@ window.addEventListener('scroll', () => {
             nav.classList.remove('hide__menu')
         }
         scrollHeight = scrollY;
-        console.log(scrollY);
 })
 
 
  /* ========= SCROLL REVEAL ANIMATION ========== */
 const sr = ScrollReveal({
-    distance: '60px',
-    duration: 2300,
+    distance: '70px',
+    duration: 2400,
     reset: true,
 })
 
 sr.reveal(`.home__info, .home__img`, {
     origin: 'top',
     interval: 100,
+})
+
+sr.reveal(`.about__info`, {
+    origin: 'left',
+})
+
+sr.reveal(`.about__img`, {
+    origin: 'right',
+    interval: 100, 
 })

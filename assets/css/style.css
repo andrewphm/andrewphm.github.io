@@ -1,5 +1,6 @@
 /* ============ FONTS ============ */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap');
 
 /* ============ CSS VARIABLES ============ */
 :root {
@@ -12,6 +13,12 @@
 
   /* Hover overlay */
   --btn-transition: 0.5s;
+
+  /* Font and typography */
+  --main-font: 'IBM Plex Mono', monospace;
+  --second-font: 'IBM Plex Sans', monospace;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
 }
 
 /* ============ RESET CSS ============ */
@@ -27,7 +34,7 @@ html {
 
 body {
   margin: var(--header-height) 0 0 0;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--main-font);
   line-height: 1.3;
 }
 
@@ -44,14 +51,23 @@ img {
 }
 
 /* ============ REUSABLE CSS CLASSES ============ */
-.container {
+.container{
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.section {
+.section{
   padding: 4.5rem 0 2.5rem;
+}
+
+.grid{
+    display:grid;
+    grid-gap: 1rem;
+}
+
+.flex{
+    display:flex;
 }
 
 /* For project container */
@@ -89,7 +105,6 @@ header {
   padding-right: 3rem;
 }
 
-
 .hide__menu {
     display: none;
 }
@@ -98,7 +113,6 @@ header {
   color: black;
   font-weight: 600;
   padding-bottom: 5px;
-  
 }
 
 .hvr-underline-from-center {
@@ -172,14 +186,12 @@ header {
   background-color: black;
 }
 
-/* New logo on scroll */
 .new__logo {
   color: white;
   background: black;
 }
 
 /* ============ HOME ============ */
-
 .home {
   height: 100vh;
 }
@@ -221,7 +233,7 @@ header {
   position: relative;
   display: flex;
   align-items: center;
-  background-color: rgb(53, 185, 237);
+  background-color: rgb(27, 78, 81);
   width: fit-content;
   padding: 1rem 2.2rem;
   color: white;
@@ -237,14 +249,15 @@ header {
   animation: linear infinite alternate;
   -webkit-animation: linear infinite alternate;
   -webkit-animation-name: translateArrow;
-  -webkit-animation-duration: 1.5s;
-  transition: all 0.3s ease-in-out;
+  -webkit-animation-duration: 1s;
+  animation-name: translateArrow;
+  animation-duration: 1s;
 }
 
 .home__info-btn::before {
   content: "";
   position: absolute;
-  border: 1px solid rgb(53, 185, 237);
+  border: 1px solid rgb(27, 78, 81);
   border-radius: 10px;
   width: calc(100%);
   height: calc(100%);
@@ -254,14 +267,14 @@ header {
 }
 
 .home__info-btn:hover {
-  background-color: rgb(27, 78, 81);
+  background-color:black;
   transition: var(--btn-transition);
   z-index: 100;
 }
 
 /* Change the ::before properties when hovering the parent */
 .home__info-btn:hover::before {
-  border: 1px solid rgb(27, 78, 81);
+  border: 1px solid black;
   transition: var(--btn-transition);
   width: calc(90%);
   height: calc(90%);
@@ -269,22 +282,133 @@ header {
   left: 0;
 }
 
+.home__info-btn:hover .home__info-arrow {
+    animation: none;
+}
+
 .home__img img {
     padding-left: 20px;
 }
 
 /* ============ ABOUT ============ */
-.about__container{
-    height: 1000px;
+.about__title{
+    font-size: 2.5rem;
 }
 
-/* ============ PROJECTS ============ */
+.about__title::after{
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 300px;
+    background-color: lightgray;
+    position: relative;
+    top: -6px;
+}
 
+.about__container{
+    grid-template-columns: 1.2fr 1fr;
+    padding-top: 2rem;
+    column-gap: 2rem;
+}
+
+.about__description{
+    font-family: var(--second-font);
+    line-height: 1.5;
+    font-size: 1.25rem;
+}
+
+.about__info-tech{
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: .89rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.ri-arrow-right-s-fill{
+    font-weight: bold;
+}
+
+.about__img {
+    padding-left: 3rem;
+    overflow: hidden;
+
+}
+
+.about__img-wrapper{
+    height: 300px;
+    width: 300px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.about__img-overlay{
+    height: 100%;
+    border-radius: 5px;
+}
+
+.about__img-wrapper::before{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: calc(100% + 1px);
+    height: calc(100% + 1px);
+    z-index: -1;
+}
+
+.about__img-wrapper::before{
+    top: 15px;
+    left: 15px;
+}
+
+.about__img-wrapper:hover::before{
+    top:10px;
+    left:10px;
+    transition: .3s;
+}
+
+/* ============ CASE STUDIES ============ */
+.project__container{
+    padding-top: 15rem;
+}
+
+.project__title{
+    font-size: 2.5rem;
+    padding-right: 3rem;
+}
+
+.project__title::after{
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 300px;
+    background-color: lightgray;
+    position: relative;
+    top: -6px;
+}
 /* ============ CONTACT ============ */
 
 /* =========== FOOTER ===========*/
+.footer__line{
+    height: 1px;
+    width: 70%;
+    background-color: lightgray;
+    margin: 0 auto;
+}
+
+.footer__info{
+    margin: 0 auto;
+    width: fit-content;
+    padding: 1.3rem 0;
+    font-size: .8rem;
+}
+
+
+
 
 /* ========== KEYFRAMES ==========*/
+/* keyframes for arrow animation */
 @keyframes translateArrow {
   0% {
     left: -3%;
