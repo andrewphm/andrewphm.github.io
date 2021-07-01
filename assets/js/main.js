@@ -23,25 +23,29 @@ window.addEventListener('scroll', () => {
 
  /* ========= SCROLL REVEAL ANIMATION ========== */
 const sr = ScrollReveal({
-    distance: '70px',
+    distance: '100px',
     duration: 2400,
-    reset: false,
+    reset: true,
 })
 
-sr.reveal(`.home__info, .home__img`, {
+sr.reveal(`.home__info`, {
     origin: 'top',
     interval: 100,
 })
 
-sr.reveal(`.about__info`, {
+sr.reveal(`.about__info, .project__one-info`, {
     origin: 'left',
 })
 
-sr.reveal(`.about__img`, {
+sr.reveal(`.about__img, .project__one-img-1, .project__one-img-2`, {
     origin: 'right',
     interval: 100, 
 })
 
+sr.reveal(`.contact__title, .contact__description, .contact__button`, {
+    origin: 'bottom',
+    interval: 100, 
+})
 
 /* ========== 3D TILT EFFECT ========= */
 VanillaTilt.init(document.querySelectorAll(".cs__container"), {
