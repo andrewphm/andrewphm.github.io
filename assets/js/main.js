@@ -20,6 +20,18 @@ window.addEventListener('scroll', () => {
         scrollHeight = scrollY;
 })
 
+ /* ========= SHOW/HIDE MENU (SMALL SCREEN)========== */
+
+const menu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle');
+
+const showMenu = () => {
+    menu.classList.toggle('show-menu')
+}
+
+navToggle.addEventListener('click', showMenu)
+
+
 
  /* ========= SCROLL REVEAL ANIMATION ========== */
 const sr = ScrollReveal({
@@ -33,7 +45,7 @@ sr.reveal(`.home__info`, {
     interval: 100,
 })
 
-sr.reveal(`.about__info, .project__one-info`, {
+sr.reveal(`.about__info, .project__info`, {
     origin: 'left',
 })
 
@@ -48,9 +60,9 @@ sr.reveal(`.contact__title, .contact__description, .contact__button`, {
 })
 
 /* ========== 3D TILT EFFECT ========= */
-VanillaTilt.init(document.querySelectorAll(".cs__container"), {
+VanillaTilt.init(document.querySelectorAll(".project__container"), {
     max: 5,
-    speed: 400,
+    speed: 600,
     glare: true,
     "max-glare": .3,
     reverse: true,

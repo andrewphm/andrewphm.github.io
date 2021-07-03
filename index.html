@@ -17,7 +17,7 @@
 </head>
 
 <header class="header" id="header">
-    <div class="nav container">
+    <div class="nav">
 
         <a href="#" class="header__logo">
             <div class="triple-border">
@@ -40,6 +40,11 @@
                 </li>
             </ul>
         </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line"></i>
+        </div>
+
     </div>
 </header>
 
@@ -133,16 +138,17 @@
         </div>
 
         <!-- ========= PROJECTS ========= -->
-        <div id="case-studies" class="project__container container section">
+        <div id="case-studies" class="cs__container container section">
             <h2 class="project__title">Case Studies    </h2>
 
-            <div class="cs__container project__one">
-                <div class="project__one-info flex">
-                    <h3 class="project__one-name">Travel</h3>
-                    <p class="project__one-description">Built with mobile-first design patterns to create a fully responsive experience. Features seamless animations and a dark/light mode. </p>
-                    <div>
-                        <a href="https://github.com/andrewphm/travel" target="_blank"><i class="ri-github-fill project__one-links"></i></a>
-                        <a href="http://www.andrewpham.ca/travel" target="_blank"><i class="ri-window-fill project__one-links"></i></a>
+            <div class="project__container project__one grid">
+
+                <div class="project__info flex">
+                    <h3 class="project__subtitle">Travel</h3>
+                    <p class="project__description">Built with mobile-first design patterns to create a fully responsive experience. Features seamless animations and a dark/light mode. </p>
+                    <div class="project__links">
+                        <a href="https://github.com/andrewphm/travel" target="_blank"><i class="ri-github-fill project__links-gh"></i></a>
+                        <a href="http://www.andrewpham.ca/travel" target="_blank"><i class="ri-window-fill project__links-demo"></i></a>
                     </div>
                     <div class="tech__stack flex">
                         <p class="technology">css</p>
@@ -150,18 +156,36 @@
                         <p class="technology">javascript</p>
                     </div>
                 </div>
-                <img src="assets/images/project1-1" alt="" class="project__one-img-1">
-                <img src="assets/images/project1-2.jpg" alt="" class="project__one-img-2">
+
+                <div class="project__img flex">
+                    <img src="assets/images/travel1" alt="" class="project__img-1">
+                    <img src="assets/images/travel2.jpg" alt="" class="project__img-2">
+                </div>
             </div>
             
-            <div class="cs__container project__one">
-                <img src="assets/images/project1-1" alt="" class="project-1-i-1">
-                <img src="assets/images/project1-2.jpg" alt="" class="project-1-i-2">
-            </div> 
+            <div class="project__container project__two grid">
+                <div class="project__info flex">
+                    <h3 class="project__subtitle">Tasty</h3>
+                    <p class="project__description">A restaurant mockup page that is fully responsive with local storage saved themes. Features smooth animations.</p>
+                    <div class="project__links">
+                        <a href="https://github.com/andrewphm/tasty" target="_blank"><i class="ri-github-fill project__links-gh"></i></a>
+                        <a href="https://andrewpham.ca/tasty" target="_blank"><i class="ri-window-fill project__links-demo"></i></a>
+                    </div>
+                    <div class="tech__stack flex">
+                        <p class="technology">css</p>
+                        <p class="technology">html</p>
+                        <p class="technology">javascript</p>
+                    </div>
+                </div>
+                <div class="project__img flex">
+                    <img src="assets/images/tasty2.jpg" alt="" class="project__img-1">
+                    <img src="assets/images/tasty1.jpg" alt="" class="project__img-2">
+                </div>
+            </div>
 
-            <div class="cs__container project__one">
-                <img src="assets/images/project1-1" alt="" class="project-1-i-1">
-                <img src="assets/images/project1-2.jpg" alt="" class="project-1-i-2">
+            <div class="project__container project__one">
+                <img src="assets/images/travel1" alt="" class="project-1-i-1">
+                <img src="assets/images/travel2" alt="" class="project-1-i-2">
             </div> 
         </div>
 
