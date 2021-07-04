@@ -103,12 +103,13 @@ img {
 }
 
 .project__info {
+  padding: 2.4rem;
   flex-direction: column;
   font-family: var(--second-font);
   color: white;
-  row-gap: .5rem;
+  row-gap: .878rem;
   line-height: 1.5;
-  width: 80%;
+  
   margin-bottom: 1rem;
 }
 
@@ -136,6 +137,7 @@ header {
 /* Hide header on scroll */
 .hide__header {
   background: transparent;
+  box-shadow: none;
 }
 
 /* ============ NAV ============ */
@@ -146,9 +148,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 70%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 4rem;
 }
 
 .nav__list {
@@ -246,7 +249,6 @@ header {
 .nav__toggle{
   font-size: 1.6rem;
   cursor: pointer;
-  padding-right: 1.3rem;
   z-index: 100;
   display: none;
 }
@@ -468,6 +470,7 @@ header {
 .project__img {
   justify-content: space-around;
   align-items: flex-end;
+  padding-right: .5rem;
 }
 
 .project__img-1,
@@ -490,10 +493,12 @@ header {
 /* ============ CONTACT ============ */
 .contact__container {
   flex-direction: column;
+  margin-top: 12rem;
   padding-bottom: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
   justify-content: center;
   align-items: center;
+  row-gap: 2rem;;
 }
 
 .contact__title {
@@ -501,7 +506,6 @@ header {
   text-align: center;
 }
 .contact__description {
-  margin: 2rem auto;
   text-align: center;
   width: 50%;
 }
@@ -512,7 +516,6 @@ header {
   width: fit-content;
   padding: 1rem 2.2rem;
   color: white;
-  margin-top: 3rem auto;
   border-radius: 10px;
   z-index: 10;
 }
@@ -541,6 +544,17 @@ header {
   height: calc(90%);
   top: 0;
   left: 0;
+}
+
+.contact__socials i{
+  color: black;
+  font-size: 1.6rem;
+  margin-right: 5px;
+}
+
+.contact__in:hover,
+.contact__gh:hover{
+  color: lightgray;
 }
 
 /* =========== FOOTER ===========*/
@@ -582,9 +596,7 @@ header {
 }
 
 @media screen and (max-width: 1130px) {
-  .header__logo {
-    margin-left: 4rem;
-  }
+
 }
 
 @media screen and (max-width: 990px) {
@@ -593,7 +605,11 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  .home__img {
+    display: none;
+  }
+  
   .nav{
     width: 100%;
     display:flex;
@@ -646,7 +662,7 @@ header {
     max-width: 100%;
   }
   .home{
-    height: 70vh;
+    height: 100vh;
   }
 
   .about__container{
@@ -669,6 +685,9 @@ header {
     flex-direction: column;
     height: 600px;
     padding: 2rem;
+  }
+  .project__info{
+    padding: 0;
   }
   .project__img-1{
     width: 100%;

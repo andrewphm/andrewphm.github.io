@@ -55,7 +55,7 @@ const sr = ScrollReveal({
 
 sr.reveal(`.home__info`, {
     origin: 'top',
-    interval: 500,
+    interval: 200,
 })
 
 sr.reveal(`.project__info`, {
@@ -64,13 +64,13 @@ sr.reveal(`.project__info`, {
 
 sr.reveal(`.project__img`, {
     origin: 'right',
-    interval: 500, 
+    interval: 200, 
 })
 
-sr.reveal(`.about__img, .about__description, .about__info-tech,
-           .contact__description, .contact__button`, {
+sr.reveal(`.about__img, .about__info,
+           .contact__description, .contact__button, .contact__socials`, {
     origin: 'bottom',
-    interval: 500, 
+    interval: 200, 
 })
 
 /* ========== 3D TILT EFFECT ========= */
