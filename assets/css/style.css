@@ -86,16 +86,9 @@ img {
   box-shadow: 0 10px 10px rgba(0, 0, 0, .4);
 }
 
-.tech__stack{
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-}
-
 .technology {
-  padding: 0.3rem;
+  padding: 0.3rem .5rem;
   margin-right: 0.5rem;
-  margin-top: 0.5rem;
   background-color: hsla(0, 0%, 100%, 0.35);
   color: white;
   width: fit-content;
@@ -109,22 +102,17 @@ img {
   font-weight: bold;
 }
 
-.project__description {
-  margin-bottom: 2rem;
-}
-
 .project__info {
   flex-direction: column;
   font-family: var(--second-font);
   color: white;
-  margin-top: 3rem;
-  margin-left: 3rem;
-  row-gap: 1rem;
+  row-gap: .5rem;
   line-height: 1.5;
+  width: 80%;
+  margin-bottom: 1rem;
 }
 
 .project__links {
-  margin-right: 1rem;
   font-size: 1.8rem;
   color: white;
 }
@@ -274,7 +262,6 @@ header {
 }
 
 .home__info {
-  display: flex;
   flex-direction: column;
   max-width: 70%;
   padding-top: 3rem;
@@ -445,7 +432,7 @@ header {
 }
 
 .project__title {
-  font-size: 2.5rem;
+  font-size: var(--h1-font-size);
   padding-right: 3rem;
 }
 
@@ -516,7 +503,7 @@ header {
 .contact__description {
   margin: 2rem auto;
   text-align: center;
-  width: 35%;
+  width: 50%;
 }
 
 .contact__button {
@@ -611,7 +598,6 @@ header {
     width: 100%;
     display:flex;
   }
-
   .nav__menu{
     display: flex;
     justify-content: center;
@@ -624,8 +610,8 @@ header {
     box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
     background-color: white;
     z-index: 3;
+    transition: .6s;
   }
-
   .nav__list{
     display: flex;
     flex-direction: column;
@@ -634,15 +620,59 @@ header {
     align-items: center;
     padding: 0;
   }
-
   .nav__item{
     display: flex;
     justify-content: center;
   }
-
   .nav__toggle{
     display: block;
     font-weight: bold;
+  }
+
+  .container{
+    max-width: 100%;
+    padding: 0 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home__container{
+    padding-top: 7rem;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .home__info{
+    max-width: 100%;
+  }
+  .home{
+    height: 70vh;
+  }
+
+  .about__container{
+    display:flex;
+    flex-direction: column;
+    max-width: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+  .about__img{
+    margin: 5rem auto;
+  }
+
+  .cs__container{
+    padding-top: 10rem;
+  }
+  .project__container{
+    max-width: 100%;
+    display:flex;
+    flex-direction: column;
+    height: 600px;
+    padding: 2rem;
+  }
+  .project__img-1{
+    width: 100%;
+    height: auto;
   }
 
 }
@@ -650,4 +680,5 @@ header {
 /* show topbar */
 .show-menu{
   top: 0;
+  transition: .3s;
 }

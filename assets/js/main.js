@@ -55,21 +55,22 @@ const sr = ScrollReveal({
 
 sr.reveal(`.home__info`, {
     origin: 'top',
-    interval: 100,
+    interval: 500,
 })
 
-sr.reveal(`.about__info, .project__info`, {
+sr.reveal(`.project__info`, {
     origin: 'left',
 })
 
-sr.reveal(`.about__img, .project__one-img-1, .project__one-img-2`, {
+sr.reveal(`.project__img`, {
     origin: 'right',
-    interval: 100, 
+    interval: 500, 
 })
 
-sr.reveal(`.contact__title, .contact__description, .contact__button`, {
+sr.reveal(`.about__img, .about__description, .about__info-tech,
+           .contact__description, .contact__button`, {
     origin: 'bottom',
-    interval: 100, 
+    interval: 500, 
 })
 
 /* ========== 3D TILT EFFECT ========= */
