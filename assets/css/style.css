@@ -152,9 +152,6 @@ header {
 
 /* ============ NAV ============ */
 
-
-
-
 /* Nav Menu */
 .nav {
   height: var(--header-height);
@@ -262,7 +259,7 @@ header {
   font-size: 1.6rem;
   cursor: pointer;
   padding-right: 1.3rem;
-  z-index: 10;
+  z-index: 100;
   display: none;
 }
 

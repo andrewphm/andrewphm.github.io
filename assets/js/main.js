@@ -21,16 +21,29 @@ window.addEventListener('scroll', () => {
 })
 
  /* ========= SHOW/HIDE MENU (SMALL SCREEN)========== */
-
 const menu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle');
+      navToggle = document.getElementById('nav-toggle'),
+      menuClass = 'ri-menu-line',
+      closeClass = 'ri-close-line'
 
 const showMenu = () => {
     menu.classList.toggle('show-menu')
+    navToggle.classList.toggle(menuClass)
+    navToggle.classList.toggle(closeClass)
 }
 
 navToggle.addEventListener('click', showMenu)
 
+/* Hide menu on click */
+const navLinks = document.querySelectorAll('.nav__link'),
+      mainBody = document.getElementById('main')
+
+const hideMenu = () => {
+    menu.classList.remove('show-menu')
+}
+
+navLinks.forEach(e => e.addEventListener('click', hideMenu));
+mainBody.addEventListener('click', hideMenu);
 
 
  /* ========= SCROLL REVEAL ANIMATION ========== */
