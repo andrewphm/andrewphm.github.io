@@ -44,6 +44,7 @@ const hideMenu = () => {
 
 navLinks.forEach(e => e.addEventListener('click', hideMenu));
 mainBody.addEventListener('click', hideMenu);
+window.addEventListener('scroll', hideMenu);
 
 
  /* ========= SCROLL REVEAL ANIMATION ========== */
