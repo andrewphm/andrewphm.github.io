@@ -1,6 +1,17 @@
 /* ============ FONTS ============ */
+/* IBM Plex mono/sans */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap");
+
+/* Gordita */
+
+@font-face {
+  src: url(fonts/Gordita-Bold.otf) format('otf');
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 700;
+}
+
 
 /* ============ CSS VARIABLES ============ */
 :root {
@@ -15,6 +26,7 @@
   --btn-transition: 0.7s;
 
   /* Font and typography */
+  --hero-font: "Gordita";
   --main-font: "IBM Plex Mono", monospace;
   --second-font: "IBM Plex Sans", monospace;
   --bigget-font-size: 4rem;
