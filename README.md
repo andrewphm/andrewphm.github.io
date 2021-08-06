@@ -11,7 +11,7 @@
 - [CSS gradients](https://cssgradient.io/) 
 
 
-## 🎨 Color Reference
+## 🎨 Colour Reference
 
 | Color          | Hex                                                                |
 | -------------- | ------------------------------------------------------------------ |
