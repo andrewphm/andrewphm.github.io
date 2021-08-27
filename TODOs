@@ -1,12 +1,14 @@
 Personal Website TODOs
 
-- [ ] Change the colour profile
-    - [ ] Update README with colour profile
+- [x] Change the colour profile
+    - [x] Update README with colour profile
 
 - [ ] Fix Header section
     - [ ] Fix logo
     - [ ] Fix design of nav/links
+    - [ ] Add anchor element for Resume in PDF format
 
 - [ ] Fix Home section 
     - [ ] Fix font styles
     - [ ] Fix layout
+    - [ ] Remove gif
