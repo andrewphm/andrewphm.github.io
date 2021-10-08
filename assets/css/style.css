@@ -169,8 +169,9 @@ header {
 
 .nav__list {
   display: flex;
-  column-gap: 3rem;
+  column-gap: 3.5rem;
   padding-right: 3rem;
+  list-style: none;
 }
 
 .hide__menu {
@@ -180,6 +181,14 @@ header {
 .nav__link {
   padding-bottom: 5px;
   color: var(--lightest-slate);
+}
+
+.nav__item{
+  font-size: 14px;
+}
+
+.nav__item a span {
+  color: #64ffda;
 }
 
 .hvr-underline-from-center {
@@ -244,7 +253,7 @@ header {
 .triple-border__container {
   color: var(--green);
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 0.4rem;
 }
 
