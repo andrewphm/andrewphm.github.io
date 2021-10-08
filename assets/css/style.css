@@ -145,7 +145,7 @@ header {
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: white;
+  background-color: var(--navy);
 }
 /* Hide header on scroll */
 .hide__header {
@@ -164,7 +164,6 @@ header {
   margin-left: auto;
   margin-right: auto;
   padding: 0 5rem;
-  background-color: var(--navy);
 }
 
 .nav__list {
@@ -274,42 +273,52 @@ header {
   display: none;
 }
 
+#main {
+  position: relative;
+  top: -7rem;
+}
+
 /* ============ HOME ============ */
 .home {
-  height: 100vh;
-}
-.home__container {
   display: flex;
-  padding-top: 6rem;
-  position: relative;
-  justify-content: center;
-}
-
-.home__info {
   flex-direction: column;
-  max-width: 70%;
-  padding-top: 3rem;
   justify-content: center;
+  height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
 }
 
-.home__info-intro {
-  font-size: var(--h3-font-size);
-  font-weight: 500;
+.home h1 {
+  color: var(--green);
+  margin: 0 0 20px 4px;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
-.home__info-name {
-  font-size: var(--h1-font-size);
-  font-weight: 700;
+.home h2 {
+  margin-bottom: 20px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: var(--lightest-slate);
+  font-size: 4rem ;
 }
 
-.home__info-desc1 {
-  font-size: var(--h3-font-size);
+.home h3 {
+  margin-bottom: 20px;
+  line-height: .9;
+  font-size: 3rem ;
+  color: var(--slate);
+  font-weight: 600;
 }
 
-.home__info-desc2 {
-  font-size: var(--normal-font-size);
-  font-weight: 500;
-  padding-bottom: 1rem;
+.home p {
+  max-width: 60%;
+  margin-bottom: 30px;
+}
+
+.home p span {
+  color: var(--green);
 }
 
 .home__info-btn {
@@ -350,14 +359,14 @@ header {
 }
 
 .home__info-btn:hover {
-  background-color: black;
+  background-color: var(--lightest-navy);
   transition: var(--btn-transition);
   z-index: 100;
 }
 
 /* Change the ::before properties when hovering the parent */
 .home__info-btn:hover::before {
-  border: 1px solid black;
+  border: 1px solid --light-navy;
   transition: var(--btn-transition);
   width: calc(90%);
   height: calc(90%);
