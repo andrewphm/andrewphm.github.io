@@ -52,6 +52,8 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--main-font);
   line-height: 1.5;
+  background-color: var(--navy);
+  color: var(--slate);
 }
 
 a {
@@ -162,6 +164,7 @@ header {
   margin-left: auto;
   margin-right: auto;
   padding: 0 5rem;
+  background-color: var(--navy);
 }
 
 .nav__list {
@@ -175,9 +178,8 @@ header {
 }
 
 .nav__link {
-  color: black;
-  font-weight: 600;
   padding-bottom: 5px;
+  color: var(--lightest-slate);
 }
 
 .hvr-underline-from-center {
@@ -196,8 +198,8 @@ header {
   left: 51%;
   right: 51%;
   bottom: 0;
-  background: black;
-  height: 3px;
+  background: var(--green);
+  height: 2px;
   -webkit-transition-property: left, right;
   transition-property: left, right;
   -webkit-transition-duration: 0.3s;
@@ -223,7 +225,7 @@ header {
   content: "";
   position: absolute;
   z-index: 2;
-  border: 2px solid black;
+  border: 2px solid var(--green);
   border-radius: 5px;
   width: calc(100% + 1px);
   height: calc(100% + 1px);
@@ -240,20 +242,20 @@ header {
 }
 
 .triple-border__container {
-  color: black;
+  color: var(--green);
   font-weight: 500;
   font-size: 1.3rem;
   padding: 0.4rem;
 }
 
 .triple-border:hover .triple-border__container {
-  color: white;
-  background-color: black;
+  color:var(--navy);
+  background-color:var(--green);
 }
 
 .new__logo {
-  color: white;
-  background: black;
+  color: var(--green);
+  background: var(--navy);
 }
 
 .nav__toggle{
@@ -271,6 +273,7 @@ header {
   display: flex;
   padding-top: 6rem;
   position: relative;
+  justify-content: center;
 }
 
 .home__info {
