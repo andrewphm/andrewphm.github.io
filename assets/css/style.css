@@ -90,55 +90,6 @@ section {
   display: flex;
 }
 
-/* For project container */
-.project__container {
-  max-width: 80%;
-  height: 380px;
-  margin: 5rem auto 8rem;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, .4);
-}
-
-.technology {
-  padding: 0.3rem .5rem;
-  margin-right: 0.5rem;
-  background-color: hsla(0, 0%, 100%, 0.35);
-  color: white;
-  width: fit-content;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 0.8rem;
-}
-
-.project__subtitle {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.project__info {
-  padding: 2.4rem;
-  flex-direction: column;
-  font-family: var(--second-font);
-  color: white;
-  row-gap: .878rem;
-  line-height: 1.5;
-  
-  margin-bottom: 1rem;
-}
-
-.project__links {
-  font-size: 1.8rem;
-  color: white;
-}
-
-.project__links-gh,
-.project__links-demo{
-  color: white;
-}
-
-/* Buttons */
 
 /* ============ HEADER ============ */
 header {
@@ -478,6 +429,7 @@ header {
   font-size: var(--h1-font-size);
   width: fit-content;
   color: var(--lightest-slate);
+  margin: 10px 0px 40px;
 }
 
 .projects__title::before {
@@ -511,9 +463,26 @@ header {
   position: relative;
   align-items: center;
   gap: 10px;
+  height: 50px;
 }
 
+.project-content {
+  z-index: 2;
+  grid-area: 1 / 6 / 1 / 13;
+  text-align: right;
+}
 
+.project-image {
+  max-width: 700px;
+  z-index: 1;
+  grid-area: 1 / 1 / 1 / 7;
+}
+
+.project-image__image {
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px -15px black;
+}
 
 /* ============ CONTACT ============ */
 .contact__container {
