@@ -75,8 +75,10 @@ img {
   margin-right: auto;
 }
 
-.section {
-  padding: 4.5rem 0 2.5rem;
+section {
+  margin: 0 auto;
+  padding: 100px 0;
+  max-width: 1000px;
 }
 
 .grid {
@@ -275,7 +277,7 @@ header {
 
 #main {
   position: relative;
-  top: -7rem;
+  top: -6rem;
 }
 
 /* ============ HOME ============ */
@@ -313,8 +315,9 @@ header {
 }
 
 .home p {
-  max-width: 60%;
+  max-width: 65%;
   margin-bottom: 30px;
+  line-height: 1.6;
 }
 
 .home p span {
@@ -366,7 +369,7 @@ header {
 
 /* Change the ::before properties when hovering the parent */
 .home__info-btn:hover::before {
-  border: 1px solid --light-navy;
+  border: 1px solid var(--lightest-navy);
   transition: var(--btn-transition);
   width: calc(90%);
   height: calc(90%);
