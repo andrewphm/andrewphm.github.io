@@ -389,6 +389,16 @@ header {
 .about__title {
   font-size: var(--h1-font-size);
   width: fit-content;
+  color: var(--lightest-slate);
+}
+
+.about__title::before {
+  position: relative;
+  bottom: 4px;
+  content: "01.";
+  color: var(--green);
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 .about__title::after {
@@ -396,9 +406,9 @@ header {
   display: inline-block;
   height: 1px;
   width: 300px;
-  background-color: lightgray;
+  background-color: var(--lightest-navy);
   position: relative;
-  top: -6px;
+  top: -7px;
 }
 
 .about__container {
@@ -417,11 +427,11 @@ header {
   grid-template-columns: repeat(2, 1fr);
   padding-top: 0.89rem;
   font-size: 1.1rem;
-  font-weight: bold;
 }
 
 .ri-arrow-right-s-fill {
   font-weight: bold;
+  color: var(--green);
 }
 
 .about__img {
@@ -444,7 +454,7 @@ header {
 .about__img-wrapper::before {
   content: "";
   position: absolute;
-  border: 2px solid black;
+  border: 2px solid var(--green);
   border-radius: 5px;
   width: calc(100% + 1px);
   height: calc(100% + 1px);
@@ -462,61 +472,9 @@ header {
   transition: 0.3s;
 }
 
-/* ============ CASE STUDIES ============ */
-.cs__container {
+/* ============ PROJECTS ============ */
 
-}
 
-.project__title {
-  font-size: var(--h1-font-size);
-  padding-right: 3rem;
-}
-
-.project__title::after {
-  content: "";
-  display: inline-block;
-  height: 1px;
-  width: 300px;
-  background-color: lightgray;
-  position: relative;
-  top: -6px;
-}
-
-.project__one {
-  grid-template-columns: 1fr 1.3fr;
-  background: linear-gradient(
-    90deg,
-    rgba(16, 118, 146, 1) 49%,
-    rgba(92, 170, 195, 1) 100%
-  );
-}
-
-.project__two {
-  grid-template-columns: 1fr 1.3fr;
-  background: linear-gradient(
-    90deg,
-    rgba(78, 150, 79, 1) 0%,
-    rgba(87, 168, 98, 1) 45%,
-    rgba(113, 218, 148, 1) 87%
-  );
-}
-
-.project__img {
-  justify-content: space-around;
-  align-items: flex-end;
-  padding-right: .5rem;
-}
-
-.project__img-1,
-.project__img-2 {
-  height: 325px;
-  width: 190px;
-}
-
-.project__links-gh:hover,
-.project__links-demo:hover {
-  color: rgb(93, 92, 92);
-}
 
 @media screen and (max-width: 1080px){
   .project__img-2{
