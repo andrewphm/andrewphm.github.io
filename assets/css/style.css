@@ -474,13 +474,46 @@ header {
 
 /* ============ PROJECTS ============ */
 
-
-
-@media screen and (max-width: 1080px){
-  .project__img-2{
-    display:none;
-  }
+.projects__title {
+  font-size: var(--h1-font-size);
+  width: fit-content;
+  color: var(--lightest-slate);
 }
+
+.projects__title::before {
+  position: relative;
+  bottom: 4px;
+  content: "02.";
+  color: var(--green);
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.projects__title::after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: 300px;
+  background-color: var(--lightest-navy);
+  position: relative;
+  top: -7px;
+}
+
+.projects__featured {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.projects__featured-1 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+  align-items: center;
+  gap: 10px;
+}
+
+
 
 /* ============ CONTACT ============ */
 .contact__container {
