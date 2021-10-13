@@ -547,6 +547,21 @@ header {
   color: var(--green);  
 }
 
+/* ============ OTHER PROJECTS ============ */
+
+#projects-other {
+  padding: 100px 0;
+}
+
+.projects-other__title {
+  margin: 0 auto;
+  text-align: center;
+  color: var(--lightest-slate);
+  font-family: var(--second-font);
+  width: fit-content;
+  display: block;
+}
+
 
 /* ============ CONTACT ============ */
 .contact__container {
