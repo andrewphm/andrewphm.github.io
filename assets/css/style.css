@@ -549,18 +549,31 @@ header {
 
 /* ============ OTHER PROJECTS ============ */
 
-#projects-other {
-  padding: 100px 0;
-}
-
 .projects-other__title {
-  margin: 0 auto;
+  margin: 0 auto 40px;
   text-align: center;
   color: var(--lightest-slate);
   font-family: var(--second-font);
   width: fit-content;
   display: block;
 }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  position: relative;
+}
+
+.projects__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: var(--light-navy);
+  padding: 2rem 1.75rem;
+  justify-content: space-between;
+}
+
 
 
 /* ============ CONTACT ============ */
