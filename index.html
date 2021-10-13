@@ -136,9 +136,10 @@
             <h2 class="projects__title">
                 Some Things I've Built
             </h2>
-            <ul class="projects__featured">
-                <li class="projects__featured-1">
-                    <div class="project-content">
+
+            <ul>
+                <li class="projects__featured">
+                    <div class="project__content-right">
                         <p class="project-overline">Featured Project</p>
                         <h3 class="project-title">
                             Halcyon Theme
@@ -155,29 +156,62 @@
                             <li>Hyper</li>
                         </ul>
                         <div class="project-links">
-                            <div class="github">
-                                <a aria-label="Github Link" target="_blank" rel="noopener noreferrer" href="">
+                            <a aria-label="Github Link" target="_blank" rel="noopener noreferrer" href="">
                                 <i class="ri-github-line icon"></i>
-                                </a>
-                            </div>
-                            <div class="demo">
-                                <a aria-label="Demo Link" target="_blank" rel="noopener noreferrer" href="">
-                                    <i class="ri-window-line icon"></i>
-                                </a>
-                            </div>
+                            </a>
+
+                            <a aria-label="Demo Link" target="_blank" rel="noopener noreferrer" href="">
+                                <i class="ri-window-line icon"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="project-image">
+                    <div class="project__image-left">
+                        <a href="#">
+                            <img src="assets/images/Halcyon.png" alt="" class="project-image__image">
+                        </a>
+                    </div>
+                </li>
+
+                <li class="projects__featured">
+                    <div class="project__content-left">
+                        <p class="project-overline">Featured Project</p>
+                        <h3 class="project-title">
+                            Halcyon Theme
+                        </h3>
+                        <div class="project-description">
+                            <p>
+                                A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+                            </p>
+                        </div>
+                        <ul class="project-tech-list">
+                            <li>Sublime text</li>
+                            <li>Atom</li>
+                            <li>iTerm2</li>
+                            <li>Hyper</li>
+                        </ul>
+                        <div class="project-links">
+                            <a aria-label="Github Link" target="_blank" rel="noopener noreferrer" href="">
+                                <i class="ri-github-line icon"></i>
+                            </a>
+
+                            <a aria-label="Demo Link" target="_blank" rel="noopener noreferrer" href="">
+                                <i class="ri-window-line icon"></i>
+                            </a>
+                        </div>
+                        
+                    </div>
+                    <div class="project__image-right">
                         <a href="#">
                             <img src="assets/images/Halcyon.png" alt="" class="project-image__image">
                         </a>
                     </div>
                 </li>
             </ul>
+
         </section> 
 
         <!-- ========= CONTACT ========= -->
-        <div class="contact__container container flex section" id="contact">
+        <section class="contact__container container flex section" id="contact">
             <h2 class="contact__title">Let's chat!</h2>
             <p class="contact__description">
                 Want to discuss new opportunties or trade ideas? Shoot me a message, my inbox is always open. 
@@ -190,7 +224,7 @@
                 <a href="www.github.com/andrewphm"><i class="ri-linkedin-fill contact__in"></i></a>
             </div>
 
-        </div>
+        </section>
 
         <!-- ========= FOOTER ========= -->
         <footer>
