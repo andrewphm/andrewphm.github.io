@@ -522,6 +522,7 @@ header {
 
 .project-tech-list {
   margin-bottom: 15px;
+  color: var(--slate);
 }
 
 .project-tech-list li {
@@ -565,16 +566,51 @@ header {
   position: relative;
 }
 
+.projects-other__list {
+  background-color: var(--light-navy);
+  border-radius: 5px;
+}
+
 .projects__card {
   display: flex;
   flex-direction: column;
   height: 100%;
-  color: var(--light-navy);
   padding: 2rem 1.75rem;
   justify-content: space-between;
+  box-shadow: 0 10px 30px -15px black;
 }
 
+.folder-icon {
+  color: var(--green);
+  font-size: 2.4rem;
+  font-weight: 300;
+}
 
+.projects__card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--m-1-5);
+}
+
+.projects__card-title {
+  color: var(--lightest-slate);
+  font-size: 1.5rem;
+  margin-bottom: .75rem;
+  font-family: var(--second-font);
+}
+
+.projects__card-description {
+  color: var(--light-slate);
+  font-family: var(--second-font);
+  margin-bottom: var(--m-1);
+}
+
+.projects__card-tech li {
+  display: inline;
+  font-size: .8rem;
+  padding: .5rem;
+  
+}
 
 /* ============ CONTACT ============ */
 .contact__container {
