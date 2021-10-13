@@ -90,6 +90,13 @@ section {
   display: flex;
 }
 
+.icon {
+  color: var(--light-slate);
+  font-size: 1.5rem;
+  margin: 5px;
+}
+
+
 
 /* ============ HEADER ============ */
 header {
@@ -268,7 +275,7 @@ header {
 .home p {
   max-width: 65%;
   margin-bottom: 30px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .home p span {
@@ -464,18 +471,19 @@ header {
   align-items: center;
   gap: 10px;
   height: 50px;
+  align-items: center;
 }
 
 .project-content {
   z-index: 2;
-  grid-area: 1 / 6 / 1 / 13;
+  grid-area: 1 / 7 / 1 / 13;
   text-align: right;
 }
 
 .project-image {
   max-width: 700px;
   z-index: 1;
-  grid-area: 1 / 1 / 1 / 7;
+  grid-area: 1 / 1 / 1 / 8;
 }
 
 .project-image__image {
@@ -483,6 +491,53 @@ header {
   border-radius: 5px;
   box-shadow: 0 10px 30px -15px black;
 }
+
+.project-overline {
+  color: var(--green);
+  font-size: .8rem;
+}
+
+.project-title {
+  color: var(--lightest-slate);
+  margin: 0 0 25px;
+  font-family: var(--second-font);
+  font-size: 1.3rem;
+}
+
+.project-description {
+  box-shadow: 0 10px 30px -15px black;
+  background-color: var(--light-navy);
+  padding: 25px;
+  color: var(--light-slate);
+  border-radius: 5px;
+  font-family: var(--second-font);
+  margin: 0 0 20px;
+}
+
+.project-tech-list {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 1.5rem;
+  margin: 0 0 20px;
+}
+
+.project-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.github, .demo {
+  transition: transform 0.2s ease-in;
+}
+
+.demo:hover, .github:hover {
+  transform: translateY(-5px);
+}
+
+.icon:hover {
+  color: var(--green);  
+}
+
 
 /* ============ CONTACT ============ */
 .contact__container {
