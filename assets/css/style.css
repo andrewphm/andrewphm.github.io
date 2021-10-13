@@ -45,7 +45,7 @@
 }
 
 html {
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -613,23 +613,36 @@ header {
 }
 
 /* ============ CONTACT ============ */
-.contact__container {
-  flex-direction: column;
-  margin-top: 10rem;
-  padding-bottom: 5rem;
-  margin-bottom: 5rem;
-  justify-content: center;
-  align-items: center;
-  row-gap: 2rem;;
+
+#contact {
+  text-align: center;
+}
+
+.contact__heading {
+  color: var(--green);
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.contact__heading::before {
+  content: "03. ";
+  color: var(--green);
+  position: relative;
+  font-size: 1rem;
 }
 
 .contact__title {
-  font-size: var(--h1-font-size);
-  text-align: center;
+  color: var(--lightest-slate);
+  font-family: var(--second-font);
+  font-size: 3rem;
+  margin-bottom: var(--m-1-5);
 }
+
 .contact__description {
-  text-align: center;
-  width: 50%;
+  width: 65%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  font-family: var(--second-font);
 }
 
 .contact__button {
@@ -655,9 +668,9 @@ header {
 }
 
 .contact__button:hover {
-  background-color: black;
-  transition: var(--btn-transition);
+  background-color: var(--lightest-navy);
   z-index: 100;
+  transition: var(--btn-transition);
 }
 
 .contact__button:hover::before {
@@ -666,18 +679,9 @@ header {
   height: calc(90%);
   top: 0;
   left: 0;
+  transition: var(--btn-transition);
 }
 
-.contact__socials i{
-  color: rgb(27, 78, 81);
-  font-size: 1.6rem;
-  margin-right: 5px;
-}
-
-.contact__in:hover,
-.contact__gh:hover{
-  color: black;
-}
 
 /* =========== FOOTER ===========*/
 .footer__line {
@@ -786,7 +790,7 @@ header {
     top: -100%;
     left: 0;
     padding: 50px 10px;
-    width: 100%;s
+    width: 100%;
     box-shadow: 0 4px 4px rgba(0, 0, 0, .9);
     background-color: white;
     z-index: 3;
