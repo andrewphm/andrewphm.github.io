@@ -616,6 +616,7 @@ header {
 
 #contact {
   text-align: center;
+  
 }
 
 .contact__heading {
@@ -639,9 +640,10 @@ header {
 }
 
 .contact__description {
-  width: 65%;
+  width: 50%;
   margin: 0 auto;
   margin-bottom: 4rem;
+  font-size: 1.2rem;
   font-family: var(--second-font);
 }
 
@@ -684,19 +686,22 @@ header {
 
 
 /* =========== FOOTER ===========*/
-.footer__line {
-  height: 1px;
-  width: 70%;
-  background-color: lightgray;
-  margin: 0 auto;
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  min-height: 65px;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  top: 80px;
 }
 
-.footer__info {
-  margin: 0 auto;
-  width: fit-content;
-  padding: 1.3rem 0;
-  font-size: 0.8rem;
-  opacity: 0.6;
+footer a {
+  color: var(--slate);
+  font-size: 12px;
 }
 
 /* ========== KEYFRAMES ==========*/
