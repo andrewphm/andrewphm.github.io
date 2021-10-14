@@ -212,7 +212,7 @@ header {
 .triple-border__container {
   color: var(--green);
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0.4rem;
 }
 
