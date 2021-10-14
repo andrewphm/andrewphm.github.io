@@ -54,12 +54,12 @@ const sr = ScrollReveal({
     reset: false,
 })
 
-sr.reveal(`#home, .nav__link`, {
+sr.reveal(`#home, .nav__link, .header__logo`, {
     origin: 'top',
     interval: 300, 
 })
 
-sr.reveal(`.projects-other__list,
+sr.reveal(`.projects-grid,
            #contact`, {
     origin: 'bottom',
     interval: 300, 
