@@ -51,27 +51,32 @@ window.addEventListener('scroll', hideMenu);
 const sr = ScrollReveal({
     distance: '100px',
     duration: 2400,
-    reset: true,
+    reset: false,
 })
 
-sr.reveal(`.home__info`, {
+sr.reveal(`#home, .nav__link`, {
     origin: 'top',
-    interval: 200,
+    interval: 300, 
 })
 
-sr.reveal(`.project__info`, {
-    origin: 'left',
-})
-
-sr.reveal(`.project__img`, {
-    origin: 'right',
-    interval: 200, 
-})
-
-sr.reveal(`.about__img, .about__info,
-           .contact__description, .contact__button, .contact__socials`, {
+sr.reveal(`.projects-other__list,
+           #contact`, {
     origin: 'bottom',
-    interval: 200, 
+    interval: 300, 
+})
+
+sr.reveal(`.project__content-left,
+           .project__image-left,
+           .about__info`, {
+    origin: 'left',
+    interval: 300,
+})
+
+sr.reveal(`.project__image-right,
+           .project__content-right,
+           .about__img`, {
+    origin: 'right',
+    interval: 300,
 })
 
 /* ========== 3D TILT EFFECT ========= */

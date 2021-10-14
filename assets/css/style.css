@@ -347,6 +347,7 @@ header {
   font-size: var(--h1-font-size);
   width: fit-content;
   color: var(--lightest-slate);
+  font-family: var(--second-font);
 }
 
 .about__title::before {
@@ -433,9 +434,10 @@ header {
 
 .projects__title {
   font-size: var(--h1-font-size);
+  font-family: var(--second-font);
   width: fit-content;
   color: var(--lightest-slate);
-  margin: 10px 0px 40px;
+  margin: 10px 0 60px;
 }
 
 .projects__title::before {
@@ -463,7 +465,7 @@ header {
   position: relative;
   align-items: center;
   gap: 10px;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   list-style: none;
   padding: 0px;
 }
@@ -511,14 +513,14 @@ header {
 
 .project-overline {
   color: var(--green);
-  font-size: .8rem;
+  font-size: .9rem;
 }
 
 .project-title {
   color: var(--lightest-slate);
   margin: 0 0 25px;
   font-family: var(--second-font);
-  font-size: 1.3rem;
+  font-size: 2rem;
 }
 
 .project-description {
@@ -529,12 +531,14 @@ header {
   border-radius: 5px;
   font-family: var(--second-font);
   margin: 0 0 20px;
+  text-align: left;
 }
 
 .project-tech-list {
   margin-bottom: 15px;
   color: var(--slate);
   text-decoration: none;
+  font-size: .8rem;
 }
 
 .project-tech-list li {
@@ -561,6 +565,10 @@ header {
 }
 
 /* ============ OTHER PROJECTS ============ */
+
+#projects-other {
+  padding-top: 0;
+}
 
 .projects-other__heading {
   margin: 0 auto 55px;
@@ -589,6 +597,10 @@ header {
   transform: translateY(-10px);
 }
 
+.projects-other__list:hover .projects__card-title {
+  color: var(--green);
+}
+
 .projects__card {
   display: flex;
   flex-direction: column;
@@ -615,10 +627,6 @@ header {
   font-size: 1.5rem;
   margin-bottom: .75rem;
   font-family: var(--second-font);
-}
-
-.projects__card-title:hover {
-  color: var(--green);
 }
 
 .projects__card-description {
