@@ -121,6 +121,35 @@ header {
   box-shadow: none;
 }
 
+/* ============ SOCIALS ============ */
+.socials {
+  display:flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  right: 70px;
+  z-index: 100;
+}
+
+.socials a {
+  margin-bottom: 10px;
+  transition: var(--btn-transition);
+}
+
+.socials a:hover {
+  transform: translateY(-5px);
+}
+
+.socials::after {
+  content: "";
+  width: 1px;
+  height: 100px;
+  background-color: var(--slate);
+  margin: auto;
+  margin-top: 1rem;
+}
+
+
 /* ============ NAV ============ */
 /* Nav Menu */
 .nav {
