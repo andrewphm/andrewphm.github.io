@@ -113,7 +113,7 @@ header {
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: var(--navy);
+  background-color: rgba(10, 25, 47, 0.85);
 }
 /* Hide header on scroll */
 .hide__header {
@@ -184,9 +184,15 @@ header {
   font-size: 14px;
 }
 
+.nav__item a {
+  font-family: var(--second-font);
+}
+
 .nav__item a span {
   color: #64ffda;
+  font-family: var(--main-font);
 }
+
 
 .hvr-underline-from-center {
   display: inline-block;
@@ -301,7 +307,7 @@ header {
 .home h3 {
   margin-bottom: 20px;
   line-height: .9;
-  font-size: 3.2rem ;
+  font-size: 4.3rem ;
   color: var(--slate);
   font-weight: 600;
 }
