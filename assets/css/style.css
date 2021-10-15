@@ -420,13 +420,13 @@ header {
 .about__description {
   font-family: var(--second-font);
   line-height: 1.5;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .about__info-tech {
   grid-template-columns: repeat(2, 1fr);
   padding-top: 0.89rem;
-  font-size: 1.1rem;
+  font-size: .8rem;
 }
 
 .ri-arrow-right-s-fill {
