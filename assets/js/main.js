@@ -4,7 +4,6 @@ const header = document.querySelector("header");
 const nav = document.getElementById("nav-menu");
 let scrollHeight = 0;
 let width = window.innerWidth;
-console.log(width);
 
 /*
 if (window.innerWidth > 1000) {
