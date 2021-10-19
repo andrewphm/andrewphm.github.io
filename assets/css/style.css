@@ -98,7 +98,7 @@ section {
 }
 
 .big-heading {
-  font-size: clamp(34px, 7vw, 62px);
+  font-size: clamp(34px, 6vw, 72px);
   align-items: center;
 }
 

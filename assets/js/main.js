@@ -153,10 +153,7 @@ if (window.innerWidth > 500) {
     sr.reveal(`.home,
                .about__info,
                .about__img,
-               .project__image-right,
-               .project__content-right,
-               .project__image-left,
-               .project__content-left,
+               .projects__featured,
                .projects-other__list,
                #contact`, {
     origin: 'bottom',
