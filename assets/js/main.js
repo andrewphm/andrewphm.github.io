@@ -40,7 +40,7 @@ window.addEventListener("scroll", () => {
     ? header.classList.add("hide__header")
     : header.classList.remove("hide__header");
 
-  if (window.innerWidth < 480 && window.scrollY < 140) {
+  if (window.innerWidth < 480 && window.scrollY < 80) {
     header.classList.remove("hide__header");
   }
 
