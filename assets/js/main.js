@@ -38,10 +38,10 @@ window.addEventListener('scroll', () => {
     } else {
         header.classList.remove('hide__header');
     }
-    if(scrollHeight > 30) {
+    if(scrollHeight > 140) {
         header.classList.add('scroll-header')
     }
-    if(scrollHeight < 30) {
+    if(scrollHeight < 140) {
         header.classList.remove('scroll-header')
     }
     scrollHeight = scrollY;

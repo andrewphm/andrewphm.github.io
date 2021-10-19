@@ -109,7 +109,7 @@ section {
   display:flex;
   white-space: nowrap;
   align-items: center;
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-size: clamp(2rem, 3vw, 2.25rem);
   font-weight: 600;
 }
 
@@ -189,7 +189,7 @@ header {
 .scroll-header {
   height: 4.5rem;
   background-color: rgba(10, 25, 47, 0.85);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   box-shadow: 0 10px 30px -10px rgba(2, 12, 27, .7);
 }
 
@@ -345,6 +345,7 @@ header {
   line-height: 1.1;
   font-weight: 600;
   color: var(--lightest-slate);
+  font-size: clamp(42px, 7vw, 72px);
 }
 
 .home h3 {
@@ -522,6 +523,10 @@ header {
 
 #projects .headings {
   margin-bottom: 2.8rem;
+}
+
+.projects-heading {
+  font-size: clamp(1.7rem, 3vw, 2.25rem);
 }
 
 .projects__featured {
@@ -974,6 +979,11 @@ footer a:hover {
     column-gap: 1rem;
   }
 
+  /* Other Projects */
+  .projects-other__heading {
+    margin-bottom: 2.8rem;
+  }
+
   /* Contact */
 
   .contact__socials {
@@ -983,7 +993,7 @@ footer a:hover {
 
 @media screen and (max-width: 480px) {
   header {
-    height: 4rem;
+    height: 5rem;
     padding: 0 2rem;
   }
 
@@ -1001,7 +1011,6 @@ footer a:hover {
 }
 
 @media screen and (max-width: 375px) {
-
   .about__img {
     max-width: 200px;
   }
