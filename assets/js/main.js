@@ -26,23 +26,25 @@ if (window.innerWidth > 1000) {
 }
 */
 
-console.log(window.scrollY);
-
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
-  if (scrollHeight < scrollY) {
-    header.classList.add("hide__header");
-  } else {
-    header.classList.remove("hide__header");
-  }
+
   if (scrollHeight > 140) {
     header.classList.add("scroll-header");
   }
   if (scrollHeight < 140) {
     header.classList.remove("scroll-header");
   }
+
+  scrollHeight < scrollY
+    ? header.classList.add("hide__header")
+    : header.classList.remove("hide__header");
+
+  if (window.innerWidth < 480 && window.scrollY < 140) {
+    header.classList.remove("hide__header");
+  }
+
   scrollHeight = scrollY;
-  console.log(window.scrollY);
 });
 
 /* Change logo */
