@@ -50,10 +50,10 @@ window.addEventListener('scroll', () => {
 })
 
 /* Change logo */
-
-if(width < 480) {
+if (window.innerWidth < 500) {
     logo.innerText = 'ap'
 }
+
 
 
  /* ========= SHOW/HIDE MENU (SMALL SCREEN)========== */
@@ -64,15 +64,16 @@ const menu = document.getElementById('nav-menu'),
       closeClass = 'ri-close-line'
 
 const showMenu = () => {
+    header.classList.add('toggle-backdrop')
     menu.classList.toggle('show-menu')
     navToggle.classList.toggle(menuClass)
     navToggle.classList.toggle(closeClass)
     main.classList.add('blur');
-
 }
 
 navToggle.addEventListener('click', () => {
     if(navToggle.classList[0] === 'ri-menu-3-line'){
+
         showMenu();
     }
     else {
@@ -106,6 +107,7 @@ window.addEventListener('scroll', () => {
     if (navToggle.classList[0] == 'ri-close-line') {
         navToggle.classList.toggle(menuClass)
         navToggle.classList.toggle(closeClass)
+        header.classList.remove('toggle-backdrop')
     }
 });
 

@@ -193,6 +193,10 @@ header {
   box-shadow: 0 10px 30px -10px rgba(2, 12, 27, .7);
 }
 
+.toggle-backdrop {
+  backdrop-filter: none;
+}
+
 /* Hide header on scroll */
 .hide__header {
   top: -8rem;
@@ -202,7 +206,6 @@ header {
 
 /* ============ NAV ============ */
 /* Nav Menu */
-
 
 
 .nav__list {
@@ -833,11 +836,17 @@ footer a:hover {
 
 /* ======== MEDIA QUERIES ======== */
 
-@media screen and (min-width: 1600px) {
-
+@media screen and (max-width: 1600px) {
+  header {
+    padding: 0 5rem;
+  }
 }
 
 @media screen and (max-width: 1080px) {
+  header {
+    padding: 0 3rem;
+  }
+
   #main {
     padding: 0 100px;
   }
@@ -877,7 +886,7 @@ footer a:hover {
     right: -100%;
     bottom: 0;
     padding: 50px 10px;
-    height: 100%;
+    height: 100vh;
     width: 60vw;
     box-shadow: 0 4px 4px rgba(0, 0, 0, .9);
     z-index: 3;
@@ -886,7 +895,7 @@ footer a:hover {
   .nav__list{
     display: flex;
     flex-direction: column;
-    row-gap: 2rem;
+    row-gap: 4rem;
     justify-content: center;
     align-items: center;
     padding: 0;
@@ -973,6 +982,12 @@ footer a:hover {
 }
 
 @media screen and (max-width: 480px) {
+  header {
+    margin-top: .5rem;
+    height: 4rem;
+    padding: 0 2rem;
+  }
+
   #main {
     padding: 0 25px;
   }
