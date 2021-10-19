@@ -983,7 +983,6 @@ footer a:hover {
 
 @media screen and (max-width: 480px) {
   header {
-    margin-top: .5rem;
     height: 4rem;
     padding: 0 2rem;
   }

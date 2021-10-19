@@ -90,6 +90,7 @@ const hideMenu = () => {
     main.classList.remove('blur');
     navToggle.classList.toggle(menuClass)
     navToggle.classList.toggle(closeClass)
+    header.classList.remove('toggle-backdrop')
 }
 
 
