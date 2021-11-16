@@ -1,7 +1,7 @@
 /* ========= HEADER TOGGLE ========== */
-const logo = document.getElementById("logo");
-const header = document.querySelector("header");
-const nav = document.getElementById("nav-menu");
+const logo = document.getElementById('logo');
+const header = document.querySelector('header');
+const nav = document.getElementById('nav-menu');
 let scrollHeight = 0;
 let width = window.innerWidth;
 
@@ -26,22 +26,22 @@ if (window.innerWidth > 1000) {
 }
 */
 
-window.addEventListener("scroll", () => {
+window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
 
   if (scrollHeight > 140) {
-    header.classList.add("scroll-header");
+    header.classList.add('scroll-header');
   }
   if (scrollHeight < 140) {
-    header.classList.remove("scroll-header");
+    header.classList.remove('scroll-header');
   }
 
   scrollHeight < scrollY
-    ? header.classList.add("hide__header")
-    : header.classList.remove("hide__header");
+    ? header.classList.add('hide__header')
+    : header.classList.remove('hide__header');
 
   if (window.innerWidth < 480 && window.scrollY < 80) {
-    header.classList.remove("hide__header");
+    header.classList.remove('hide__header');
   }
 
   scrollHeight = scrollY;
@@ -49,26 +49,26 @@ window.addEventListener("scroll", () => {
 
 /* Change logo */
 if (window.innerWidth < 500) {
-  logo.innerText = "ap";
+  logo.innerText = 'ap';
 }
 
 /* ========= SHOW/HIDE MENU (SMALL SCREEN)========== */
-const menu = document.getElementById("nav-menu"),
-  navToggle = document.getElementById("nav-toggle"),
-  main = document.getElementById("main"),
-  menuClass = "ri-menu-3-line",
-  closeClass = "ri-close-line";
+const menu = document.getElementById('nav-menu'),
+  navToggle = document.getElementById('nav-toggle'),
+  main = document.getElementById('main'),
+  menuClass = 'ri-menu-3-line',
+  closeClass = 'ri-close-line';
 
 const showMenu = () => {
-  header.classList.add("toggle-backdrop");
-  menu.classList.toggle("show-menu");
+  header.classList.add('toggle-backdrop');
+  menu.classList.toggle('show-menu');
   navToggle.classList.toggle(menuClass);
   navToggle.classList.toggle(closeClass);
-  main.classList.add("blur");
+  main.classList.add('blur');
 };
 
-navToggle.addEventListener("click", () => {
-  if (navToggle.classList[0] === "ri-menu-3-line") {
+navToggle.addEventListener('click', () => {
+  if (navToggle.classList[0] === 'ri-menu-3-line') {
     showMenu();
   } else {
     hideMenu();
@@ -76,38 +76,38 @@ navToggle.addEventListener("click", () => {
 });
 
 /* Hide menu on click */
-const navLinks = document.querySelectorAll(".nav__link"),
-  mainBody = document.getElementById("main");
+const navLinks = document.querySelectorAll('.nav__link'),
+  mainBody = document.getElementById('main');
 
 const hideMenu = () => {
-  menu.classList.remove("show-menu");
-  main.classList.remove("blur");
+  menu.classList.remove('show-menu');
+  main.classList.remove('blur');
   navToggle.classList.toggle(menuClass);
   navToggle.classList.toggle(closeClass);
-  header.classList.remove("toggle-backdrop");
+  header.classList.remove('toggle-backdrop');
 };
 
-navLinks.forEach((e) => e.addEventListener("click", hideMenu));
-mainBody.addEventListener("click", () => {
+navLinks.forEach((e) => e.addEventListener('click', hideMenu));
+mainBody.addEventListener('click', () => {
   hideMenu();
-  if (navToggle.classList[0] == "ri-close-line") {
+  if (navToggle.classList[0] == 'ri-close-line') {
     navToggle.classList.toggle(menuClass);
     navToggle.classList.toggle(closeClass);
   }
-  main.classList.remove("blur");
+  main.classList.remove('blur');
 });
-window.addEventListener("scroll", () => {
+window.addEventListener('scroll', () => {
   hideMenu();
-  if (navToggle.classList[0] == "ri-close-line") {
+  if (navToggle.classList[0] == 'ri-close-line') {
     navToggle.classList.toggle(menuClass);
     navToggle.classList.toggle(closeClass);
-    header.classList.remove("toggle-backdrop");
+    header.classList.remove('toggle-backdrop');
   }
 });
 
 /* ========= SCROLL REVEAL ANIMATION ========== */
 const sr = ScrollReveal({
-  distance: "100px",
+  distance: '100px',
   duration: 2400,
   reset: false,
 });
@@ -120,9 +120,9 @@ if (window.innerWidth > 500) {
                .home-description-2,
                .home__info-btn`,
     {
-      origin: "top",
+      origin: 'top',
       interval: 200,
-      distance: "40px",
+      distance: '40px',
     }
   );
 
@@ -130,7 +130,7 @@ if (window.innerWidth > 500) {
     `.projects-grid,
                #contact`,
     {
-      origin: "bottom",
+      origin: 'bottom',
       interval: 300,
     }
   );
@@ -140,7 +140,7 @@ if (window.innerWidth > 500) {
     .project__content-left,
                .about__info`,
     {
-      origin: "left",
+      origin: 'left',
       interval: 300,
     }
   );
@@ -150,7 +150,7 @@ if (window.innerWidth > 500) {
                .project__content-right,
                .about__img`,
     {
-      origin: "right",
+      origin: 'right',
       interval: 300,
     }
   );
@@ -163,17 +163,17 @@ if (window.innerWidth > 500) {
                .projects-other__list,
                #contact`,
     {
-      origin: "bottom",
+      origin: 'bottom',
       interval: 200,
     }
   );
 }
 
 /* ========== 3D TILT EFFECT ========= */
-VanillaTilt.init(document.querySelectorAll(".project__container"), {
+VanillaTilt.init(document.querySelectorAll('.project__container'), {
   max: 5,
   speed: 600,
   glare: true,
-  "max-glare": 0.3,
+  'max-glare': 0.3,
   reverse: true,
 });
