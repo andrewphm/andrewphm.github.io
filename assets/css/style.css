@@ -1,7 +1,7 @@
 /* ============ FONTS ============ */
 /* IBM Plex mono/sans */
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap');
 
 /* ============ CSS VARIABLES ============ */
 :root {
@@ -16,8 +16,8 @@
   --btn-transition: 0.7s;
 
   /* Font and typography */
-  --main-font: "IBM Plex Mono", monospace;
-  --second-font: "IBM Plex Sans", monospace;
+  --main-font: 'IBM Plex Mono', monospace;
+  --second-font: 'IBM Plex Sans', monospace;
   --bigget-font-size: 4rem;
   --h1-font-size: 2.25rem;
   --h2-font-size: 1.75rem;
@@ -116,7 +116,7 @@ section {
 .headings::before {
   counter-increment: section;
   position: relative;
-  content: "0" counter(section) ".";
+  content: '0' counter(section) '.';
   color: var(--green);
   font-size: clamp(1rem, 3vw, 1.5rem);
   font-weight: 300;
@@ -124,7 +124,7 @@ section {
 }
 
 .headings::after {
-  content: "";
+  content: '';
   display: inline-block;
   height: 1px;
   width: 300px;
@@ -163,7 +163,7 @@ section {
 }
 
 .socials::after {
-  content: "";
+  content: '';
   width: 1px;
   height: 100px;
   background-color: var(--slate);
@@ -245,7 +245,7 @@ header {
   overflow: hidden;
 }
 .hvr-underline-from-center:before {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
   left: 51%;
@@ -275,7 +275,7 @@ header {
 
 .triple-border:before,
 .triple-border:after {
-  content: "";
+  content: '';
   position: absolute;
   z-index: 2;
   border: 2px solid var(--green);
@@ -389,7 +389,7 @@ header {
 }
 
 .home__info-btn::before {
-  content: "";
+  content: '';
   position: absolute;
   border: 1px solid rgb(27, 78, 81);
   border-radius: 10px;
@@ -436,7 +436,7 @@ header {
 
 .about__title::before {
   position: relative;
-  content: "01.";
+  content: '01.';
   color: var(--green);
   font-size: 1.5rem;
   font-weight: 300;
@@ -444,7 +444,7 @@ header {
 }
 
 .about__title::after {
-  content: "";
+  content: '';
   display: inline-block;
   height: 1px;
   width: 300px;
@@ -496,7 +496,7 @@ header {
 }
 
 .about__img-wrapper::before {
-  content: "";
+  content: '';
   position: absolute;
   border: 2px solid var(--green);
   border-radius: 5px;
@@ -735,7 +735,7 @@ header {
 }
 
 .contact__heading::before {
-  content: "03. ";
+  content: '03. ';
   color: var(--green);
   position: relative;
   font-size: 1rem;
@@ -767,7 +767,7 @@ header {
 }
 
 .contact__button::before {
-  content: "";
+  content: '';
   position: absolute;
   border: 1px solid rgb(27, 78, 81);
   border-radius: 10px;
@@ -870,6 +870,10 @@ footer a:hover {
 
   section {
     padding: 80px 0;
+  }
+
+  #contact {
+    padding-bottom: 0;
   }
 
   .nav {
