@@ -56,6 +56,10 @@ body {
   counter-reset: section;
 }
 
+p {
+  color: var(--light-slate);
+}
+
 a {
   text-decoration: none;
 }
@@ -957,7 +961,7 @@ footer a:hover {
   }
 
   .project-image__image {
-    opacity: 5%;
+    opacity: 10%;
     height: 100%;
     width: auto;
     border-radius: 2px;
