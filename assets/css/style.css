@@ -310,6 +310,10 @@ header {
   background-color: var(--green);
 }
 
+.triple-border:hover #logo p {
+  color: var(--navy);
+}
+
 .new__logo {
   color: var(--green);
   background: var(--navy);
