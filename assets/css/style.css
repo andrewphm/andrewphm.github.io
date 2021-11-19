@@ -213,8 +213,9 @@ header {
 
 .nav__list {
   display: flex;
-  column-gap: 3.5rem;
+  column-gap: 2.8rem;
   list-style: none;
+  align-items: center;
 }
 
 .hide__menu {
@@ -224,6 +225,26 @@ header {
 .nav__link {
   color: var(--lightest-slate);
   font-size: 1rem;
+}
+
+.resume {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--green);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.resume:hover {
+  transform: scale(1.05);
+}
+
+.resume:hover p {
+  color: var(--green);
+}
+
+.resume p {
+  color: var(--lightest-slate);
 }
 
 .nav__item {
@@ -303,6 +324,10 @@ header {
   font-weight: 500;
   font-size: 1rem;
   padding: 0.4rem;
+}
+
+#logo p {
+  color: var(--lightest-slate);
 }
 
 .triple-border:hover .triple-border__container {
