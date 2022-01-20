@@ -26,6 +26,24 @@ if (window.innerWidth > 1000) {
 }
 */
 
+function consoleMessage() {
+  const message =
+    '%c Hi programers 👋! \n Welcome to my space, for collaborations shoot me an email \n andrpham@gmail.com';
+  const styles = [
+    `font-size: 12px`,
+    `font-family: monospace`,
+    `background: white`,
+    `display: inline-block`,
+    `color: black`,
+    `padding: 8px 19px`,
+    `border: 1px dashed;`,
+  ].join(';');
+
+  console.log(message, styles);
+}
+
+consoleMessage();
+
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
 
