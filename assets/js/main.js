@@ -28,7 +28,7 @@ if (window.innerWidth > 1000) {
 
 function consoleMessage() {
   const message =
-    '%c Hi programers 👋! \n Welcome to my space, for collaborations shoot me an email \n andrpham@gmail.com';
+    '%c Hi programmers 👋! \n Welcome to my space, for collaborations shoot me an email \n andrpham@gmail.com';
   const styles = [
     `font-size: 12px`,
     `font-family: monospace`,
